@@ -22,7 +22,8 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
+a) A saída será undefined seguido de erro ✅
+&nbsp;&nbsp;&nbsp;&nbsp; O var é uma variável que quando setada é levada ao topo do escopo, porém apenas a sua declaração e não sua atribuição, o que gera o um undefined na saída. Agora, as variáveis let não podem ser acessadas antes de serem declaradas o que gera um ReferenceError.
 
 b) A saída será 5 seguido de 10
 
@@ -43,7 +44,8 @@ function soma(a, b) {
 console.log(soma(2, 0));
 ```
 
-a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
+a) Substituir if (a || b === 0) por if (a === 0 || b === 0)✅
+&nbsp;&nbsp;&nbsp;&nbsp; A leitura do código dá preferência ao operador de comparação, assim como na matemática em que a multiplicação tem prioridade em relação a soma, isso faz com a máquina entenda que se b for igual a zero ou a existir entrará no if. Então, para corrigir esse problema basta escrever o "ou" individualmente como em "a === 0 || b === 0" ou podemos apenas escrever "(a || b) === 0"
 
 b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
@@ -78,11 +80,13 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+b) O código imprime 200.✅
+&nbsp;&nbsp;&nbsp;&nbsp; Não há um break no primeiro caso, isso faz com que haja uma leitura do segundo caso mesmo o "tipo" sendo referente ao primeiro caso. Por isso, imprime 200.
 
 c) O código imprime 50.
 
 d) O código gera um erro.
+
 
 ______
 **4) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -99,7 +103,8 @@ b) 6
 
 c) 18
 
-d) 24
+d) 24✅
+&nbsp;&nbsp;&nbsp;&nbsp; O código multiplica os números por 2 e com essa resposta aplica o filtro selecionando apenas os números maiores que 5, após isso, o "reduce" traz uma função na qual os números devem ser aplicados e diz a partir de qual posição da lista isso deve começar.
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -113,7 +118,8 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+c) ["banana", "abacaxi", "manga", "laranja"]✅
+&nbsp;&nbsp;&nbsp;&nbsp; O uso do .splace na lista restira e coloca elementos nela da seguinte forma, (posição do primeiro elemento a ser retirado, número de elementos retirado, elementos adicionados...)
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
 ______
@@ -123,7 +129,8 @@ I. A herança é utilizada para compartilhar métodos e propriedades entre class
 II. Em JavaScript, a herança é implementada através da palavra-chave `extends`.
 
 
-a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
+a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.✅
+&nbsp;&nbsp;&nbsp;&nbsp; A primeira apresenta de forma clara a explicação do funcionamento da herança em JavaScript. Enquanto isso, a segunda explica de forma objetiva como é implementado uma classe. Assim, também justificando a primeira afirmação.
 
 b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
 
@@ -165,7 +172,8 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+a) I e II são verdadeiras.✅
+&nbsp;&nbsp;&nbsp;&nbsp; A primeira afirmação explica de forma adequada o funcionamento de uma classe e como ela funciona nesse caso específico, a segunda afirmação comenta da criação da nova função "apresentar()" que se utiliza da função anterior por meio do super, a terceira afirmação está errada pois de fato o JavaScript suporta herança e ela ainda foi feita adequadamente.
 
 b) I, II e III são verdadeiras.
 
@@ -182,7 +190,8 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+b) A asserção é verdadeira e a razão é falsa.✅
+&nbsp;&nbsp;&nbsp;&nbsp; A asserção se prova já na questão anterior, já que nela era chamada uma mesma função de mesmo nome, mas que haviam respostas diferentes. Agora, a Razão está falsa, pois ao escrever duas funções de mesmo nome porém com funcionamentos diferentes em uma mesma classe, uma irá sobrepor a outras, ao invés de apresentar duas respostas
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
