@@ -212,13 +212,13 @@ ______
 
 ```javascript
 function somaArray(numeros) {
-
-    for (i = 0; i < numeros.size; i++) {
-        soma = 2*numeros[i];
+ var soma = 0 //define soma 
+    for (i = 0; i < numeros.length; i++) {//repete o for até chegar no comprimento da lista
+        soma += 2*numeros[i];//soma o dobro de cada número
     }
-    return soma;
+    return soma;// retorna soma
 }
-console.log(somaArray([1, 2, 3, 4]));
+console.log(somaArray([1, 2, 3, 4]));//printa a soma de todos os dobros no console
 ```
 ______
 10) Crie um exemplo prático no qual você tenha duas classes:
