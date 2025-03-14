@@ -212,9 +212,9 @@ ______
 
 ```javascript
 function somaArray(numeros) {
- var soma = 0 //define soma 
+ var soma = 0 //define soma  já que antes não era definida de forma adequada
     for (i = 0; i < numeros.length; i++) {//repete o for até chegar no comprimento da lista
-        soma += 2*numeros[i];//soma o dobro de cada número
+        soma += 2*numeros[i];//soma o dobro de cada número o que antes era igualar ao dobro do último número
     }
     return soma;// retorna soma
 }
@@ -227,3 +227,27 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+```javascript
+class Produto {
+  constructor(nome, preco) {
+    this.nome = nome;
+    this.preco = preco;
+  }
+  calcularDesconto() {
+    console.log(`o preço com desconto é: ${this.preco * 0.9}`);
+  }
+}
+class Livro extends Produto {
+  constructor(nome, preco) {
+    super(nome, preco);
+  }
+  calcularDesconto() {
+    console.log(`o preço do livro com desconto é: ${this.preco * 0.8}`);
+  }
+}
+const anna = new Livro("anna riciopo", 100);
+anna.calcularDesconto();
+```
+
+A herança serve para a classe "filho", no caso Livro, pegar as informações de nome e preço da classe "mãe", no caso a classe Produto. A modificação do método se baseia na modificação do desconto, que por sua vez é feita com base na multiplicação do preço por 0.8 que equivale a um desconto de 20%.
